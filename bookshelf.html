@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf | Devendra Dhakad</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Arial', sans-serif; /* Replace with your website's font */
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Replace with your website's background color */
+            color: #333333; /* Replace with your website's text color */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a73e8; /* Replace with your website's primary color */
+            color: #ffffff; /* Replace with your website's header text color */
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc; /* Match with your website's border color */
+            border-radius: 5px;
+        }
+
+        /* Bookshelf Grid */
+        .bookshelf {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        /* Book Card */
+        .book-card {
+            background-color: #f9f9f9; /* Match with your website's card background */
+            border: 1px solid #e0e0e0; /* Match with your website's border color */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .book-card img {
+            max-width: 100%;
+            height: auto;
+            border-bottom: 1px solid #e0e0e0; /* Match with your website's border color */
+        }
+
+        .book-card h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #1a73e8; /* Match with your website's accent color */
+        }
+
+        .book-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #666666; /* Match with your website's secondary text color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Devendra's Bookshelf</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for books...">
+        </div>
+        <div class="bookshelf" id="bookshelf">
+            <!-- Book Cards Go Here -->
+        </div>
+    </div>
+    <script>
+        // Books Data
+        const books = [
+            { title: "The Nectar of Pain", author: "Najwa Zebian", image: "./images/books/the_nectar_of_pain.jpg", description: "." },
+            { title: "man's search for meaning", author: "Viktor Frankl", image: "./images/books/man's_search_for_meaning.jpg", description: "." }
+        ];
+
+        // Select Elements
+        const bookshelf = document.getElementById('bookshelf');
+        const searchInput = document.getElementById('searchInput');
+
+        // Display Books Function
+        function displayBooks(filter = "") {
+            bookshelf.innerHTML = "";
+            const filteredBooks = books.filter(book =>
+                book.title.toLowerCase().includes(filter.toLowerCase()) ||
+                book.author.toLowerCase().includes(filter.toLowerCase())
+            );
+            filteredBooks.forEach(book => {
+                const bookCard = `
+                    <div class="book-card">
+                        <img src="${book.image}" alt="${book.title}">
+                        <h3>${book.title}</h3>
+                        <p>${book.author}</p>
+                        <p>${book.description}</p>
+                    </div>
+                `;
+                bookshelf.innerHTML += bookCard;
+            });
+        }
+
+        // Add Event Listener to Search Input
+        searchInput.addEventListener('input', () => {
+            displayBooks(searchInput.value);
+        });
+
+        // Initial Display
+        displayBooks();
+    </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Papers | Devendra Dhakad</title>
+    <style>
+        /* Base Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff; /* Replace with your website's background color */
+            color: #333333; /* Replace with your website's text color */
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a73e8; /* Replace with your website's primary color */
+            color: #ffffff; /* Replace with your website's header text color */
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        /* Search Bar */
+        .search-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+
+        /* Research Papers Grid */
+        .papers {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        /* Paper Card */
+        .paper-card {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .paper-card h3 {
+            font-size: 18px;
+            margin: 10px 0 5px;
+            color: #1a73e8; /* Replace with your website's accent color */
+        }
+
+        .paper-card p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #666666;
+        }
+
+        .paper-card .actions a {
+            display: inline-block;
+            margin-right: 10px;
+            padding: 5px 10px;
+            font-size: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            background-color: #1a73e8;
+            border-radius: 5px;
+        }
+
+        .paper-card .actions a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Devendra's Research Papers</h1>
+    </header>
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for papers...">
+        </div>
+        <div class="papers" id="papers">
+            <!-- Research Paper Cards Go Here -->
+        </div>
+    </div>
+    <script>
+        // Papers Data
+        const papers = [
+            { 
+                title: "Understanding Neural Networks", 
+                authors: "John Doe, Jane Smith", 
+                year: "2021", 
+                link: "https://example.com/paper1.pdf", 
+                description: "A comprehensive study of neural networks and their applications."
+            }
+
+        ];
+
+        // Select Elements
+        const papersContainer = document.getElementById('papers');
+        const searchInput = document.getElementById('searchInput');
+
+        // Display Papers Function
+        function displayPapers(filter = "") {
+            papersContainer.innerHTML = "";
+            const filteredPapers = papers.filter(paper =>
+                paper.title.toLowerCase().includes(filter.toLowerCase()) ||
+                paper.authors.toLowerCase().includes(filter.toLowerCase()) ||
+                paper.year.includes(filter)
+            );
+            filteredPapers.forEach(paper => {
+                const paperCard = `
+                    <div class="paper-card">
+                        <h3>${paper.title}</h3>
+                        <p><strong>Authors:</strong> ${paper.authors}</p>
+                        <p><strong>Year:</strong> ${paper.year}</p>
+                        <p>${paper.description}</p>
+                        <div class="actions">
+                            <a href="${paper.link}" target="_blank">View Paper</a>
+                        </div>
+                    </div>
+                `;
+                papersContainer.innerHTML += paperCard;
+            });
+        }
+
+        // Add Event Listener to Search Input
+        searchInput.addEventListener('input', () => {
+            displayPapers(searchInput.value);
+        });
+
+        // Initial Display
+        displayPapers();
+    </script>
+</body>
+</html>

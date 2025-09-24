@@ -9,7 +9,8 @@
     <meta name="generator" content="Hugo 0.118.2">
     <title>Devendra dhakad</title>
     
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/starter-template/">
+    <link rel="canonical" href="https://devendra-dhakad.github.io/">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
 
@@ -68,21 +69,59 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      /* Custom Tech-Focused Color Palette */
+      :root {
+        --tech-primary: #0066cc;        /* Deep tech blue */
+        --tech-secondary: #00a86b;      /* Modern green */
+        --tech-accent: #ff6b35;         /* Vibrant orange */
+        --tech-dark: #1a1a2e;          /* Deep navy */
+        --tech-light: #f8f9fa;         /* Clean light */
+        --tech-gradient: linear-gradient(135deg, #0066cc 0%, #00a86b 100%);
+        --tech-gradient-hover: linear-gradient(135deg, #0052a3 0%, #008c5a 100%);
+      }
 
+      .btn-bd-primary {
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-bg: var(--tech-primary);
+        --bs-btn-border-color: var(--tech-primary);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-hover-bg: #0052a3;
+        --bs-btn-hover-border-color: #0052a3;
+        --bs-btn-focus-shadow-rgb: 0, 102, 204;
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #004080;
+        --bs-btn-active-border-color: #004080;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background: var(--tech-gradient);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--tech-gradient-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      }
+
+      /* Navigation styling */
+      .nav-pills .nav-link.active {
+        background: var(--tech-gradient);
+        border-radius: 25px;
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: rgba(0, 102, 204, 0.1);
+        transform: translateY(-1px);
       }
 
       .bd-mode-toggle {
@@ -126,18 +165,11 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
-  font-size: 16px;
-  color: #939393;
-}
-body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
 }
 .toggles-image {
   width: 32px;
@@ -145,9 +177,31 @@ body {
   fill: #000; /* Set fill color to black */
 }
 .img-fluid {
-  width: 550px;
-  height: 800px;
-  fill: #000; /* Set fill color to black */
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Responsive profile image container */
+@media (max-width: 768px) {
+  .img-fluid {
+    max-width: 300px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .img-fluid {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .img-fluid {
+    max-width: 450px;
+  }
 }
 .work {
   margin-bottom: 20px;
@@ -163,12 +217,108 @@ body {
   font-size: 3rem;
 }
 
-  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
+      html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+      }
+
+      /* Subtle Animations and Smooth Interactions */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Card hover animations */
+      .card, .book-card, .paper-card {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .card:hover, .book-card:hover, .paper-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 40px rgba(0, 102, 204, 0.15);
+      }
+
+      /* Social media icons hover animations */
+      .social-media-section a svg {
+        transition: all 0.3s ease;
+      }
+
+      .social-media-section a:hover svg {
+        transform: scale(1.1) rotate(5deg);
+      }
+
+      /* Profile image hover effect */
+      .img-fluid {
+        transition: all 0.4s ease;
+      }
+
+      .img-fluid:hover {
+        transform: scale(1.02);
+        box-shadow: 0 8px 32px rgba(0, 102, 204, 0.2);
+      }
+
+      /* Section fade-in animation */
+      section {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Loading animation for images */
+      img {
+        transition: opacity 0.3s ease;
+      }
+
+      img:not([src]) {
+        opacity: 0;
+      }
+
+      /* Smooth focus animations */
+      input:focus, textarea:focus {
+        transition: all 0.3s ease;
+        transform: scale(1.02);
+      }
+
+      /* Text hover animations */
+      .post-title a, .card-title a {
+        transition: color 0.3s ease;
+      }
+
+      /* Icon bounce animation on hover */
+      .icon-square {
+        transition: all 0.3s ease;
+      }
+
+      .icon-square:hover {
+        transform: scale(1.1);
+        animation: bounce 0.6s ease;
+      }
+
+      @keyframes bounce {
+        0%, 20%, 60%, 100% {
+          transform: translateY(0) scale(1.1);
+        }
+        40% {
+          transform: translateY(-10px) scale(1.1);
+        }
+        80% {
+          transform: translateY(-5px) scale(1.1);
+        }
+      }
+
+      /* Stagger animation for multiple elements */
+      .row > .col:nth-child(1) { animation-delay: 0.1s; }
+      .row > .col:nth-child(2) { animation-delay: 0.2s; }
+      .row > .col:nth-child(3) { animation-delay: 0.3s; }
 
     </style>
 
@@ -257,45 +407,51 @@ body {
 
 <section>
 <div class="container px-4 py-5" id="hanging-icons">
-    <h2 class="pb-2 border-bottom">Blogs</h2>
+    <h2 class="pb-2 border-bottom">Latest Blog Posts</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       
       <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="./images/3.webp"  alt="Toggles" class="toggles-image">
-
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3" style="background: var(--tech-primary);">
+          <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-cloud-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+            <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+          </svg>
         </div>  
         <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
+          <h3 class="fs-4 text-body-emphasis">Cloud-Native Observability with eBPF</h3>
+          <p>Exploring how eBPF revolutionizes monitoring and troubleshooting in cloud-native environments. Learn about building custom observability tools that provide deep insights into application performance.</p>
+          <a href="./blogs.html" class="btn btn-primary">
+            Read More
           </a>
         </div>
       </div>
 
       <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="./images/3.webp"  alt="Toggles" class="toggles-image">
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3" style="background: var(--tech-secondary);">
+          <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-gear-fill" viewBox="0 0 16 16">
+            <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+          </svg>
         </div>
         <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
+          <h3 class="fs-4 text-body-emphasis">Kubernetes Security Best Practices</h3>
+          <p>Deep dive into CKS certification insights and practical security implementations for Kubernetes clusters. From RBAC to network policies and runtime security.</p>
+          <a href="./blogs.html" class="btn btn-primary">
+            Read More
           </a>
         </div>
       </div>
       
       <div class="col d-flex align-items-start">
-        <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-          <img src="./images/3.webp"  alt="Toggles" class="toggles-image">
+        <div class="icon-square text-body-emphasis d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3 rounded-3" style="background: var(--tech-accent);">
+          <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="white" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
+            <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+          </svg>
         </div>
         <div>
-          <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-          <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-          <a href="#" class="btn btn-primary">
-            Primary button
+          <h3 class="fs-4 text-body-emphasis">DevOps at Scale: Amazon Experience</h3>
+          <p>Lessons learned from building resilient, high-scale cloud infrastructures at Amazon. Insights into automation, monitoring, and operational excellence in enterprise environments.</p>
+          <a href="./blogs.html" class="btn btn-primary">
+            Read More
           </a>
         </div>
       </div>
@@ -507,6 +663,16 @@ computer science & engineering</h4>
 
 <section>
   <footer class="pt-5 my-5 text-body-secondary border-top" style="text-align: center;">
+    <div class="mb-3">
+      <div class="d-flex justify-content-center align-items-center mb-2">
+        <svg xmlns="https://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-eye me-2" viewBox="0 0 16 16">
+          <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
+          <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/>
+        </svg>
+        <span id="visitor-count" class="fw-bold">Loading visitors...</span>
+      </div>
+      <small class="text-muted">Total page views</small>
+    </div>
     Created by Devendra · © 2023
   </footer>
 </section>
@@ -514,7 +680,32 @@ computer science & engineering</h4>
 </div>
 <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
 
+<script>
+// Simple visitor counter using localStorage
+function updateVisitorCount() {
+  // Get current count from localStorage
+  let visitorCount = localStorage.getItem('visitorCount');
+  
+  // If no count exists, start at 1, otherwise increment
+  if (!visitorCount) {
+    visitorCount = 1;
+  } else {
+    visitorCount = parseInt(visitorCount) + 1;
+  }
+  
+  // Store updated count
+  localStorage.setItem('visitorCount', visitorCount);
+  
+  // Update display
+  const countElement = document.getElementById('visitor-count');
+  if (countElement) {
+    countElement.textContent = visitorCount.toLocaleString() + ' visitors';
+  }
+}
 
+// Update visitor count when page loads
+document.addEventListener('DOMContentLoaded', updateVisitorCount);
+</script>
 
     </body>
 </html>

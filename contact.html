@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="a DevOps Engineer with a rich history at Amazon, I have honed my expertise in cloud-native technologies, earning both CKA and CKS certifications. My passion lies in the realm of eBPF, where I am currently expanding my knowledge and skill set. With two years of experience at Amazon, I've developed a robust understanding of cloud infrastructures, contributing to high-scale projects that demanded resilience, efficiency, and innovation. My recent endeavors involve leveraging eBPF to enhance cloud-native observability, crafting tools that not only simplify but also elevate the monitoring and troubleshooting of cloud applications. I am an enthusiast of the open-source community, continuously learning, and contributing to the evolution of cloud technologies.">
+    <meta name="description" content="Contact Devendra Dhakad, DevOps Engineer with Amazon experience. Connect for opportunities in cloud-native technologies, eBPF, Kubernetes, and DevOps consulting. Available for technical discussions and collaboration.">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
     <title>Devendra dhakad</title>
@@ -70,21 +70,59 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      /* Custom Tech-Focused Color Palette */
+      :root {
+        --tech-primary: #0066cc;        /* Deep tech blue */
+        --tech-secondary: #00a86b;      /* Modern green */
+        --tech-accent: #ff6b35;         /* Vibrant orange */
+        --tech-dark: #1a1a2e;          /* Deep navy */
+        --tech-light: #f8f9fa;         /* Clean light */
+        --tech-gradient: linear-gradient(135deg, #0066cc 0%, #00a86b 100%);
+        --tech-gradient-hover: linear-gradient(135deg, #0052a3 0%, #008c5a 100%);
+      }
 
+      .btn-bd-primary {
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-bg: var(--tech-primary);
+        --bs-btn-border-color: var(--tech-primary);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-hover-bg: #0052a3;
+        --bs-btn-hover-border-color: #0052a3;
+        --bs-btn-focus-shadow-rgb: 0, 102, 204;
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #004080;
+        --bs-btn-active-border-color: #004080;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background: var(--tech-gradient);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--tech-gradient-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      }
+
+      /* Navigation styling */
+      .nav-pills .nav-link.active {
+        background: var(--tech-gradient);
+        border-radius: 25px;
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: rgba(0, 102, 204, 0.1);
+        transform: translateY(-1px);
       }
 
       .bd-mode-toggle {
@@ -93,6 +131,136 @@
 
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
+      }
+
+      /* Consistent styling across pages */
+      .site-blocks-cover, .site-blocks-cover .row {
+        min-height: 400px;
+      }
+      
+      .site-blocks-cover.overlay {
+        position: relative;
+      }
+
+      .site-blocks-cover {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+      }
+
+      .section-heading h2 {
+        font-size: 3rem;
+      }
+
+      /* Contact page specific styling */
+      .contact-section {
+        padding: 70px 0;
+      }
+
+      .contact-form-container {
+        background: var(--tech-light);
+        border-radius: 15px;
+        padding: 2rem;
+        box-shadow: 0 8px 32px rgba(0, 102, 204, 0.1);
+        border: 1px solid rgba(0, 102, 204, 0.1);
+      }
+
+      .contact-form-container h2 {
+        color: var(--tech-dark);
+        font-weight: 600;
+      }
+
+      .social-media-section h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: var(--tech-dark);
+        font-weight: 600;
+      }
+
+      /* Enhanced social media buttons */
+      .btn-outline-dark {
+        border-color: var(--tech-dark);
+        color: var(--tech-dark);
+        transition: all 0.3s ease;
+      }
+
+      .btn-outline-dark:hover {
+        background-color: var(--tech-dark);
+        border-color: var(--tech-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(26, 26, 46, 0.3);
+      }
+
+      .btn-outline-primary {
+        border-color: var(--tech-primary);
+        color: var(--tech-primary);
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--tech-primary);
+        border-color: var(--tech-primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      }
+
+      .btn-outline-danger {
+        border-color: var(--tech-accent);
+        color: var(--tech-accent);
+      }
+
+      .btn-outline-danger:hover {
+        background-color: var(--tech-accent);
+        border-color: var(--tech-accent);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+      }
+
+      /* Responsive iframe */
+      .contact-form-container iframe {
+        width: 100%;
+        max-width: 640px;
+        height: 850px;
+        border: none;
+        border-radius: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .contact-form-container iframe {
+          height: 600px;
+        }
+        
+        .social-media-section h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      /* Subtle Animations and Smooth Interactions */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Section fade-in animation */
+      section {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
 
@@ -161,91 +329,60 @@
       </ul>
     </header>
 
-    <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p class="opacity-75">Blog name here.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+    <!-- Contact Header Section -->
+    <div class="site-blocks-cover overlay" style="background-image: url('./images/4.jpg'); height: 50vh; min-height: 400px;" id="contact-header">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="0">Get In Touch</h1>
+            <p class="text-white-50 lead" data-aos="fade-up" data-aos-delay="100">Let's connect and discuss DevOps, Cloud Technologies, and opportunities</p>
           </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
-  <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYOE42HBlTX5stUGIUuWbiHzJUc9NCMW1QTH24oWGFWm0BSA/viewform?embedded=true" width="640" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  <section class="contact-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 mb-5">
+          <div class="contact-form-container">
+            <h2 class="text-center mb-4">Send me a message</h2>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScYOE42HBlTX5stUGIUuWbiHzJUc9NCMW1QTH24oWGFWm0BSA/viewform?embedded=true" width="640" height="850" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="social-media-section text-center">
+            <h1>Connect on Social Media</h1>
+            <p class="lead mb-4">Follow me for updates on DevOps, Cloud Technologies, and eBPF insights</p>
+            
+            <div class="d-flex justify-content-center flex-wrap gap-3">
+              <a href="https://github.com/devendra-dhakad" class="btn btn-outline-dark btn-lg">
+                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-github me-2" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+                </svg>
+                GitHub
+              </a>
+              
+              <a href="https://linkedin.com/in/devendra-dhakad" class="btn btn-outline-primary btn-lg">
+                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-linkedin me-2" viewBox="0 0 16 16">
+                  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
+                </svg>
+                LinkedIn
+              </a>
+              
+              <a href="https://www.instagram.com/ds_dhakad/" class="btn btn-outline-danger btn-lg">
+                <svg xmlns="https://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-instagram me-2" viewBox="0 0 16 16">
+                  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                </svg>
+                Instagram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-    <div class="col">
-    
-    <br> 
-    <h1> Contact us on social media </h1>
-    <br>
-<section style="display: flex; justify-content: center;">
-<a href="https://github.com/devendra-dhakad" style="margin-right: 10px;">
-<svg xmlns="https://www.w3.org/2000/svg" width="80
-" height="80" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
-</svg>
-</a>
-<a href="https://linkedin.com/in/devendra-dhakad" style="margin-right: 10px;">
-<svg xmlns="https://www.w3.org/2000/svg" width="80
-" height="80
-" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-  <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"/>
-</svg>
-</a>
-<a href="https://www.instagram.com/ds_dhakad/">
-<svg xmlns="https://www.w3.org/2000/svg" width="80
-" height="80
-" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-</svg>
-</a>
-</section>
-
-    </div>
-  </div>
-</div>
+  </section>
   
 
   
@@ -264,11 +401,3 @@
 
     </body>
 </html>
-
-
-
-
-
-
-
-

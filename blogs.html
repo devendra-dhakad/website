@@ -3,7 +3,7 @@
   <head><script src="../assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
-    <meta name="description" content="a DevOps Engineer with a rich history at Amazon, I have honed my expertise in cloud-native technologies, earning both CKA and CKS certifications. My passion lies in the realm of eBPF, where I am currently expanding my knowledge and skill set. With two years of experience at Amazon, I've developed a robust understanding of cloud infrastructures, contributing to high-scale projects that demanded resilience, efficiency, and innovation. My recent endeavors involve leveraging eBPF to enhance cloud-native observability, crafting tools that not only simplify but also elevate the monitoring and troubleshooting of cloud applications. I am an enthusiast of the open-source community, continuously learning, and contributing to the evolution of cloud technologies.">
+    <meta name="description" content="Read Devendra Dhakad's technical blog featuring insights on DevOps, cloud-native technologies, eBPF observability, Kubernetes security, and lessons learned from building scalable infrastructure at Amazon. Expert perspectives on modern cloud technologies.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Devendra dhakad">
     <title>Devendra dhakad</title>
@@ -69,21 +69,59 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      /* Custom Tech-Focused Color Palette */
+      :root {
+        --tech-primary: #0066cc;        /* Deep tech blue */
+        --tech-secondary: #00a86b;      /* Modern green */
+        --tech-accent: #ff6b35;         /* Vibrant orange */
+        --tech-dark: #1a1a2e;          /* Deep navy */
+        --tech-light: #f8f9fa;         /* Clean light */
+        --tech-gradient: linear-gradient(135deg, #0066cc 0%, #00a86b 100%);
+        --tech-gradient-hover: linear-gradient(135deg, #0052a3 0%, #008c5a 100%);
+      }
 
+      .btn-bd-primary {
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-bg: var(--tech-primary);
+        --bs-btn-border-color: var(--tech-primary);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-hover-bg: #0052a3;
+        --bs-btn-hover-border-color: #0052a3;
+        --bs-btn-focus-shadow-rgb: 0, 102, 204;
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #004080;
+        --bs-btn-active-border-color: #004080;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background: var(--tech-gradient);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--tech-gradient-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      }
+
+      /* Navigation styling */
+      .nav-pills .nav-link.active {
+        background: var(--tech-gradient);
+        border-radius: 25px;
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: rgba(0, 102, 204, 0.1);
+        transform: translateY(-1px);
       }
 
       .bd-mode-toggle {
@@ -92,6 +130,81 @@
 
       .bd-mode-toggle .dropdown-menu .active .bi {
         display: block !important;
+      }
+
+      /* Consistent styling across pages */
+      .site-blocks-cover, .site-blocks-cover .row {
+        min-height: 400px;
+      }
+      
+      .site-blocks-cover.overlay {
+        position: relative;
+      }
+
+      .site-blocks-cover {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+
+      body {
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #212529;
+      }
+
+      .section-heading h2 {
+        font-size: 3rem;
+      }
+
+      .post-preview {
+        margin-bottom: 2rem;
+      }
+
+      .post-title {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        color: var(--tech-dark);
+      }
+
+      .post-title:hover {
+        color: var(--tech-primary);
+        transition: color 0.3s ease;
+      }
+
+      .post-subtitle {
+        font-size: 1.1rem;
+        color: #6c757d;
+        margin-bottom: 1rem;
+      }
+
+      .post-meta {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      /* Subtle Animations and Smooth Interactions */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Section fade-in animation */
+      section {
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
 
@@ -160,53 +273,17 @@
       </ul>
     </header>
 
-    <div id="myCarousel" class="carousel slide mb-6 pointer-event" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p class="opacity-75">Blog name here.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="https://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect></svg>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+    <!-- Blog Header Section -->
+    <div class="site-blocks-cover overlay" style="background-image: url('./images/4.jpg'); height: 50vh; min-height: 400px;" id="blog-header">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-lg-8">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="0">My Blog</h1>
+            <p class="text-white-50 lead" data-aos="fade-up" data-aos-delay="100">Insights on DevOps, Cloud Technologies, and eBPF</p>
           </div>
         </div>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 
 
     <div class="container px-4 px-lg-5">

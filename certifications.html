@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="a DevOps Engineer with a rich history at Amazon, I have honed my expertise in cloud-native technologies, earning both CKA and CKS certifications. My passion lies in the realm of eBPF, where I am currently expanding my knowledge and skill set. With two years of experience at Amazon, I've developed a robust understanding of cloud infrastructures, contributing to high-scale projects that demanded resilience, efficiency, and innovation. My recent endeavors involve leveraging eBPF to enhance cloud-native observability, crafting tools that not only simplify but also elevate the monitoring and troubleshooting of cloud applications. I am an enthusiast of the open-source community, continuously learning, and contributing to the evolution of cloud technologies.">
+    <meta name="description" content="View Devendra Dhakad's professional certifications including CKA, CKS, Google Cloud, SUSE, Red Hat, and cybersecurity credentials. Comprehensive portfolio of cloud-native, Kubernetes, and DevOps certifications from leading technology providers.">
     <meta name="author" content="Devendra dhakad">
     <meta name="generator" content="Hugo 0.118.2">
     <title>Devendra dhakad</title>
@@ -68,21 +68,59 @@
         -webkit-overflow-scrolling: touch;
       }
 
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+      /* Custom Tech-Focused Color Palette */
+      :root {
+        --tech-primary: #0066cc;        /* Deep tech blue */
+        --tech-secondary: #00a86b;      /* Modern green */
+        --tech-accent: #ff6b35;         /* Vibrant orange */
+        --tech-dark: #1a1a2e;          /* Deep navy */
+        --tech-light: #f8f9fa;         /* Clean light */
+        --tech-gradient: linear-gradient(135deg, #0066cc 0%, #00a86b 100%);
+        --tech-gradient-hover: linear-gradient(135deg, #0052a3 0%, #008c5a 100%);
+      }
 
+      .btn-bd-primary {
         --bs-btn-font-weight: 600;
         --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-bg: var(--tech-primary);
+        --bs-btn-border-color: var(--tech-primary);
         --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-hover-bg: #0052a3;
+        --bs-btn-hover-border-color: #0052a3;
+        --bs-btn-focus-shadow-rgb: 0, 102, 204;
         --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
+        --bs-btn-active-bg: #004080;
+        --bs-btn-active-border-color: #004080;
+      }
+
+      /* Custom button styles */
+      .btn-primary {
+        background: var(--tech-gradient);
+        border: none;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary:hover {
+        background: var(--tech-gradient-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+      }
+
+      /* Navigation styling */
+      .nav-pills .nav-link.active {
+        background: var(--tech-gradient);
+        border-radius: 25px;
+      }
+
+      .nav-pills .nav-link {
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        margin: 0 5px;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: rgba(0, 102, 204, 0.1);
+        transform: translateY(-1px);
       }
 
       .bd-mode-toggle {
@@ -126,18 +164,11 @@
 }
 
 body {
-  font-family: "Nunito", sans-serif;
-  line-height: 1.6;
-  font-size: 16px;
-  color: #939393;
-}
-body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  text-align: left;
 }
 .toggles-image {
   width: 32px;
@@ -163,16 +194,14 @@ body {
   font-size: 3rem;
 }
 
-  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
 }
 
-  .container {
-    max-width: 1300px;
-  }
+.container {
+  max-width: 1300px;
 }
 
 
@@ -206,8 +235,8 @@ body {
 }
 
 .card-post:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0,0,0,.15);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(0, 102, 204, 0.2);
 }
 
 .equal-50 {
@@ -495,4 +524,3 @@ body {
 
     </body>
 </html>
-
